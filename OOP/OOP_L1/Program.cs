@@ -10,6 +10,14 @@ namespace OOP_L1
     {
         static void Main(string[] args)
         {
+            BankAccount account = new BankAccount();
+
+            account.SetAccountType(0);
+            account.SetNumber(550);
+            account.SetAmount(1000000);
+
+            Console.WriteLine(account);
+            Console.ReadLine();
         }
     }
 }
