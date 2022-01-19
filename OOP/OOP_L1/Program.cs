@@ -13,10 +13,16 @@ namespace OOP_L1
             BankAccount account = new BankAccount();
 
             account.SetAccountType(0);
-            account.SetNumber(550);
             account.SetAmount(1000000);
 
+            BankAccount account1 = new BankAccount();
+
+            account1.SetAccountType(0);
+            account1.SetAmount(100);
+
             Console.WriteLine(account);
+            Console.WriteLine(account1);
+
             Console.ReadLine();
         }
     }

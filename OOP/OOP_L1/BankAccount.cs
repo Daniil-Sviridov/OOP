@@ -16,6 +16,13 @@ namespace OOP_L1
     }
     public class BankAccount
     {
+
+        public BankAccount()
+        {
+            SetNumber();
+        }
+
+        protected static int _nextNumber;
         /// <summary>
         /// Номер счета
         /// </summary>
@@ -31,9 +38,10 @@ namespace OOP_L1
         /// Установить номер счета
         /// </summary>
         /// <param name="newNumber"> номер счета int</param>
-        public void SetNumber(int newNumber)
+        protected void SetNumber()
         {
-            _number = newNumber;
+            _number = _nextNumber;
+            _nextNumber += 1;
         }
 
         /// <summary>
