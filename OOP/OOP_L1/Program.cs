@@ -14,6 +14,8 @@ namespace OOP_L1
 
             BankAccount account1 = new BankAccount(Accounttype.credit, 200);
 
+            Console.WriteLine($"На счетах : {account1.Amaunt + account.Amaunt}");
+
             Console.WriteLine(account);
             Console.WriteLine(account1);
 

@@ -16,6 +16,29 @@ namespace OOP_L1
     }
     public class BankAccount
     {
+        public decimal Amaunt
+        {
+            get
+            {
+                return _amount;
+            }
+        }
+
+        public Accounttype Type 
+        {
+            get
+            { 
+                return _type; 
+            } 
+        }
+
+        public int Number 
+        {
+            get 
+            {
+                return _number;
+            }
+        }
         /// <summary>
         /// Конструктор с параметрами.
         /// </summary>
@@ -60,37 +83,6 @@ namespace OOP_L1
         {
             _number = _nextNumber;
             _nextNumber += 1;
-        }
-
-        /// <summary>
-        /// Получить номер счета
-        /// </summary>
-        /// <returns>int номер счета</returns>
-        public int GetNumber()
-        {
-            return _number;
-        }
-
-
-        /// <summary>
-        /// ПолучитьТип счтеа
-        /// </summary>
-        /// <returns></returns>
-        public Accounttype GetAccountType()
-        {
-           // if (_type == Accounttype.accountcurrent)
-                return _type;
-            //else
-            //    return (Accounttype)0;
-        }
-
-        /// <summary>
-        /// Получить сумму по счету
-        /// </summary>
-        /// <returns></returns>
-        public decimal GetAmount()
-        {
-            return _amount;
         }
 
         public override string ToString()
