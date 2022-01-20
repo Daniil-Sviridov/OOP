@@ -16,9 +16,27 @@ namespace OOP_L1
     }
     public class BankAccount
     {
+        /// <summary>
+        /// Конструктор с параметрами.
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="amaunt"></param>
+        public BankAccount(Accounttype type, decimal amaunt)
+        {
+            _type = type;
+            _amount = amaunt;
 
+            SetNumber();
+        }
+
+        /// <summary>
+        /// Конструктор по умолчанию
+        /// </summary>
         public BankAccount()
         {
+            _type = Accounttype.accountcurrent;
+            _amount = 0;
+
             SetNumber();
         }
 
@@ -53,14 +71,6 @@ namespace OOP_L1
             return _number;
         }
 
-        /// <summary>
-        /// Установить тип счета
-        /// </summary>
-        /// <param name="type">Тип счета int</param>
-        public void SetAccountType(int type)
-        {
-            _type = (Accounttype)type;
-        }
 
         /// <summary>
         /// ПолучитьТип счтеа
@@ -68,20 +78,10 @@ namespace OOP_L1
         /// <returns></returns>
         public Accounttype GetAccountType()
         {
-            if (_type == Accounttype.accountcurrent)
+           // if (_type == Accounttype.accountcurrent)
                 return _type;
-            else
-                return (Accounttype)0;
-        }
-
-        /// <summary>
-        /// Установить сууму на счету
-        /// </summary>
-        /// <param name="summ"></param>
-        public void SetAmount(decimal summ)
-        {
-
-            _amount = summ;
+            //else
+            //    return (Accounttype)0;
         }
 
         /// <summary>

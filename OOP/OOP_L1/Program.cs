@@ -10,15 +10,9 @@ namespace OOP_L1
     {
         static void Main(string[] args)
         {
-            BankAccount account = new BankAccount();
+            BankAccount account = new BankAccount(0, 10000000);
 
-            account.SetAccountType(0);
-            account.SetAmount(1000000);
-
-            BankAccount account1 = new BankAccount();
-
-            account1.SetAccountType(0);
-            account1.SetAmount(100);
+            BankAccount account1 = new BankAccount(Accounttype.credit, 200);
 
             Console.WriteLine(account);
             Console.WriteLine(account1);
