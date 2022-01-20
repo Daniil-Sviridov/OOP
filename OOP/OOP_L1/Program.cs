@@ -19,6 +19,14 @@ namespace OOP_L1
             Console.WriteLine(account);
             Console.WriteLine(account1);
 
+            Console.WriteLine("Сняли со счета на карманные расходы.");
+            account.Withdraw(10000000);
+
+            Console.WriteLine($"На счетах : {account1.Amaunt + account.Amaunt}");
+
+            Console.WriteLine(account);
+            Console.WriteLine(account1);
+
             Console.ReadLine();
         }
     }

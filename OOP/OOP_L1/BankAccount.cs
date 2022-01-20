@@ -32,6 +32,21 @@ namespace OOP_L1
             } 
         }
 
+        public void Withdraw(decimal sum)
+        {
+            if (_amount < sum) 
+            {
+                throw new Exception("Недостаточно средств на счете.");
+            };
+
+            _amount -= sum;
+        }
+
+        public void UpAccount(decimal sum)
+        { 
+            _amount += sum;
+        }
+
         public int Number 
         {
             get 
