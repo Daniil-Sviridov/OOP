@@ -24,17 +24,17 @@ namespace OOP_L1
             }
         }
 
-        public Accounttype Type 
+        public Accounttype Type
         {
             get
-            { 
-                return _type; 
-            } 
+            {
+                return _type;
+            }
         }
 
         public void Withdraw(decimal sum)
         {
-            if (_amount < sum) 
+            if (_amount < sum)
             {
                 throw new Exception("Недостаточно средств на счете.");
             };
@@ -43,13 +43,13 @@ namespace OOP_L1
         }
 
         public void UpAccount(decimal sum)
-        { 
+        {
             _amount += sum;
         }
 
-        public int Number 
+        public int Number
         {
-            get 
+            get
             {
                 return _number;
             }
@@ -100,6 +100,12 @@ namespace OOP_L1
             _nextNumber += 1;
         }
 
+        public void MoveFromAccount(BankAccount acc, decimal sum)
+        {
+            acc.Withdraw(sum);
+
+            UpAccount(sum);
+        }
         public override string ToString()
         {
             return $"N:{_number} T:{_type} Summ: {_amount}";
