@@ -1,13 +1,37 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace OOP_L1
 {
     internal class Program
     {
+
+        static Program()
+        {
+            Console.WriteLine("ReverceLinq");
+            Console.WriteLine(ReverceLinq("Hello world!"));
+            Console.WriteLine("ReverceFor");
+            Console.WriteLine(ReverceFor("Hello world!"));
+        }
+
+        static string ReverceFor(string str)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = str.Length - 1; i >= 0; i--)
+            {
+                sb.Append(str[i]);
+            }
+
+            return sb.ToString();
+        }
+
+        static string ReverceLinq(string str)
+        {
+            return new string(str.ToCharArray().Reverse().ToArray());
+        }
+
         static void Main(string[] args)
         {
             BankAccount account = new BankAccount(0, 10000000);
