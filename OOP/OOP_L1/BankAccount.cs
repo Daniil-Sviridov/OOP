@@ -111,5 +111,29 @@ namespace OOP_L1
             return $"N:{_number} T:{_type} Summ: {_amount}";
         }
 
+        public override bool Equals(object obj)
+        {
+            if (obj is BankAccount objectType)
+            {
+                return objectType._amount == this._amount;
+            }
+
+            return base.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
+        public static bool operator ==(BankAccount acc1, BankAccount acc2)
+        { 
+            return acc1.Equals(acc2);
+        }
+
+        public static bool operator !=(BankAccount acc1, BankAccount acc2)
+        {
+            return !acc1.Equals(acc2);
+        }
     }
 }

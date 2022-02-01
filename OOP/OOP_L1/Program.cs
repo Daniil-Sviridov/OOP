@@ -57,6 +57,8 @@ namespace OOP_L1
             Console.WriteLine(account);
             Console.WriteLine(account1);
 
+            Console.WriteLine("Сравним счета(равенство по сумме) {0} и {1} = {2}", account.Amaunt, account1.Amaunt, account == account1);
+
             Console.ReadLine();
         }
     }
